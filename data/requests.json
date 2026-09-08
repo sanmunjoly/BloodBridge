@@ -1,0 +1,28 @@
+[
+    {
+        "id": "REQ-41A2B3",
+        "recipient_id": "USR-PATIENT",
+        "recipient": "Sadia Karim",
+        "blood_group": "A+",
+        "units": 2,
+        "hospital": "Square Hospital, Dhaka",
+        "urgency": "Urgent",
+        "note": "Needed for scheduled surgery.",
+        "status": "Pending",
+        "created": "2025-08-14"
+    },
+    {
+        "id": "REQ-72C4D1",
+        "recipient_id": "USR-PATIENT",
+        "recipient": "Sadia Karim",
+        "blood_group": "O+",
+        "units": 1,
+        "hospital": "Ibn Sina Hospital",
+        "urgency": "Routine",
+        "note": "",
+        "status": "Fulfilled",
+        "donor_id": "USR-DONOR",
+        "donor": "Arif Hasan",
+        "created": "2025-07-22"
+    }
+]

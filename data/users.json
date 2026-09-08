@@ -1,0 +1,6 @@
+[
+  {"id":"USR-ADMIN","name":"Maya Chen","email":"admin@bloodbridge.local","password":"$2y$12$ARJvVMKDmJtt57qAtDbXV.lLUIyqhCEUnOlDPEUrH7OtnM3N5pjE2","role":"admin","blood_group":"O+","phone":"+880 1700-000001","location":"Dhaka","available":false,"joined":"2025-06-01"},
+  {"id":"USR-DONOR","name":"Arif Hasan","email":"donor@bloodbridge.local","password":"$2y$12$ARJvVMKDmJtt57qAtDbXV.lLUIyqhCEUnOlDPEUrH7OtnM3N5pjE2","role":"donor","blood_group":"O+","phone":"+880 1700-000002","location":"Dhanmondi, Dhaka","available":true,"joined":"2025-06-12"},
+  {"id":"USR-DONOR2","name":"Nadia Ahmed","email":"nadia@bloodbridge.local","password":"$2y$12$ARJvVMKDmJtt57qAtDbXV.lLUIyqhCEUnOlDPEUrH7OtnM3N5pjE2","role":"donor","blood_group":"A+","phone":"+880 1700-000003","location":"Gulshan, Dhaka","available":true,"joined":"2025-07-02"},
+  {"id":"USR-PATIENT","name":"Sadia Karim","email":"patient@bloodbridge.local","password":"$2y$12$ARJvVMKDmJtt57qAtDbXV.lLUIyqhCEUnOlDPEUrH7OtnM3N5pjE2","role":"recipient","blood_group":"A+","phone":"+880 1700-000004","location":"Uttara, Dhaka","available":false,"joined":"2025-07-08"}
+]

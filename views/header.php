@@ -1,0 +1,13 @@
+<?php
+$page = $page ?? 'dashboard';
+$active = $page;
+$user = $user ?? [];
+$flash = $flash ?? null;
+?><!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title><?= h($page === 'dashboard' ? 'Overview' : ucwords(str_replace('-', ' ', $page))) ?> | BloodBridge</title><link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<div class="app-shell">
+<aside class="sidebar"><a class="brand" href="index.php"><span class="brand-mark">+</span><span>blood<span>bridge</span></span></a><div class="profile-mini"><div class="avatar"><?= h(strtoupper(substr($user['name'], 0, 1))) ?></div><div><strong><?= h($user['name']) ?></strong><small><?= h(ucfirst($user['role'])) ?></small></div></div>
+<nav><small class="nav-label">Workspace</small><a class="<?= $active === 'dashboard' ? 'active' : '' ?>" href="index.php">Overview</a><?php if ($user['role'] === 'recipient'): ?><a class="<?= $active === 'find-donor' ? 'active' : '' ?>" href="index.php?page=find-donor">Find a donor</a><a class="<?= $active === 'requests' ? 'active' : '' ?>" href="index.php?page=requests">My requests</a><?php elseif ($user['role'] === 'donor'): ?><a class="<?= $active === 'donations' ? 'active' : '' ?>" href="index.php?page=donations">Donation requests</a><a href="index.php?page=profile">Donation history</a><?php else: ?><a class="<?= $active === 'admin-requests' ? 'active' : '' ?>" href="index.php?page=admin-requests">Manage requests</a><a class="<?= $active === 'stock' ? 'active' : '' ?>" href="index.php?page=stock">Blood stock</a><?php endif; ?><small class="nav-label">Account</small><a class="<?= $active === 'profile' ? 'active' : '' ?>" href="index.php?page=profile">My profile</a><a href="index.php?page=logout">Sign out</a></nav><div class="sidebar-note"><strong>Every drop counts.</strong><span>Help keep your community ready for emergencies.</span></div></aside>
+<main class="main"><header class="topbar"><button class="menu-toggle" data-menu-toggle>☰</button><div><span class="eyebrow">BloodBridge / <?= h(ucfirst($user['role'])) ?></span><h1><?= h($page === 'dashboard' ? 'Good morning, ' . explode(' ', $user['name'])[0] : ucwords(str_replace('-', ' ', $page))) ?></h1></div><a class="user-chip" href="index.php?page=profile"><span class="avatar small"><?= h(strtoupper(substr($user['name'], 0, 1))) ?></span><?= h($user['name']) ?></a></header><?php if ($flash): ?><div class="toast <?= h($flash['type']) ?>"><?= h($flash['message']) ?></div><?php endif; ?>

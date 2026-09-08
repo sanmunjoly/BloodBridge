@@ -1,0 +1,7 @@
+{
+    "intelephense.files.exclude": [
+        "**/views/**"
+    ],
+    "intelephense.diagnostics.undefinedVariables": false,
+    "intelephense.diagnostics.undefinedTypes": false
+}
